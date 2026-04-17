@@ -1,7 +1,7 @@
 {
   "name": "realtime-canvas-backend",
   "version": "1.0.0",
-  "description": "Realtime collaborative canvas backend using Socket.IO",
+  "description": "Realtime-collaborative canvas backend using Socket.IO",
   "main": "src/server.js",
   "type": "module",
   "scripts": {

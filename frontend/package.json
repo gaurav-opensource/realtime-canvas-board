@@ -2,6 +2,7 @@
   "name": "realtime-canvas-frontend",
   "private": true,
   "version": "0.0.0",
+  "description": "Realtime-collaborative canvas frontend using Socket.IO",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,6 +1,6 @@
 import http from "http";
-import app from "./src/app.js";
-import { initSocket } from "./src/sockets/canvasSocket.js";
+import app from "./app.js";
+import { initSocket } from "./sockets/canvasSocket.js";
 
 const PORT = process.env.PORT || 5000;
 
