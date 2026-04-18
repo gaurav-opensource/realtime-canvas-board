@@ -12,7 +12,7 @@ export const initSocket = (server) => {
   io.on("connection", (socket) => {
     console.log("User connected:", socket.id);
 
-    // 🔥 Join Room
+    // Join Room
     socket.on("join-room", (roomId) => {
       socket.join(roomId);
 
@@ -25,27 +25,32 @@ export const initSocket = (server) => {
       console.log(`User ${socket.id} joined ${roomId}`);
     });
 
-    // 🎨 Draw Event
+    // Draw Event
     socket.on("draw", (data) => {
       const { roomId } = data;
 
       // Send to others (not sender)
-      socket.to(roomId).emit("draw", data);
+    socket.to(roomId).emit("draw", data);
+          });
+          socket.on("update-shape", ({ roomId, shape, index }) => {
+        socket.to(roomId).emit("update-shape", { shape, index });
     });
 
-    // 🔁 Undo Event
-    socket.on("undo", (data) => {
-      const { roomId } = data;
-      socket.to(roomId).emit("undo", data);
+    socket.on("cursor-move", ({ roomId, x, y, userId }) => {
+      socket.to(roomId).emit("cursor-move", { x, y, userId });
     });
 
-    // 🔁 Redo Event
-    socket.on("redo", (data) => {
-      const { roomId } = data;
-      socket.to(roomId).emit("redo", data);
+    // Undo
+    socket.on("undo", ({ roomId, userId }) => {
+      socket.to(roomId).emit("undo", { userId });
     });
 
-    // ❌ Disconnect
+    // Redo
+    socket.on("redo", ({ roomId, shapes }) => {
+      socket.to(roomId).emit("redo", { shapes });
+    });
+
+    // Disconnect
     socket.on("disconnect", () => {
       console.log("User disconnected:", socket.id);
 
