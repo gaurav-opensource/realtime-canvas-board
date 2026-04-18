@@ -1,72 +1,94 @@
 # 🚀 Realtime Collaborative Canvas Board
 
-A fully functional **realtime collaborative whiteboard** inspired by tools like Excalidraw, where multiple users can draw, edit, and interact on a shared canvas instantly — without any login.
+A powerful **realtime collaborative whiteboard** inspired by tools like Excalidraw — built to enable multiple users to draw, edit, and interact on a shared canvas instantly, with **no authentication required**.
+
+🔗 **Live Demo:**  
+👉 https://realtime-canvas-board-frontend.onrender.com/
 
 ---
 
-## ✨ Features
+## ✨ Key Highlights
 
-### 🧠 Core Features
+- ⚡ Realtime multi-user collaboration
+- 🎯 Smooth and intuitive canvas experience
+- 🔗 Instant shareable rooms (no login)
+- 🧠 Infinite canvas with zoom & pan
+- 🔄 Per-user undo/redo (advanced logic)
 
-* 🎨 **Freehand Drawing (Pen Tool)**
-* ⬛ **Shapes**: Rectangle, Circle, Line
-* 🧽 **Eraser Tool**
-* 🖐 **Infinite Canvas** with **Panning & Zoom**
-* 🔗 **Shareable Rooms** (unique URL per room)
-* ⚡ **Realtime Sync** (draw, move, resize)
+---
+
+## 🧠 Core Features
+
+### 🎨 Drawing Tools
+- ✏️ Freehand Pen Tool
+- ⬛ Rectangle
+- ⚪ Circle
+- ➖ Line
+- 🧽 Eraser
+
+---
+
+### 🖐 Canvas Interaction
+- Infinite canvas (no boundaries)
+- Smooth panning (hand tool)
+- Zoom in/out (scroll + buttons)
+
+---
+
+### 🔗 Collaboration
+- Shareable room link
+- Multiple users on same canvas
+- Realtime updates via WebSockets
 
 ---
 
 ### 🔄 Undo / Redo (Per User)
-
-* Each user has **independent undo/redo history**
-* Your actions do NOT affect other users
+- Each user has independent history
+- Your undo does NOT affect others
+- Works in realtime
 
 ---
 
-### 🧩 Advanced Features (Bonus)
-
-* 🖱 **Selection Tool** (select & move shapes)
-* 📏 **Resize Shapes** using corner handles
-* 👥 **Live Cursor Tracking** (see other users' pointers)
-* 🎯 Smooth UX similar to modern whiteboard apps
+### 🧩 Advanced Features
+- 🖱 Selection & move shapes
+- 📏 Resize shapes (corner handles)
+- 👥 Live cursor tracking
+- 🎯 Clean & intuitive UI/UX
 
 ---
 
 ## 🏗 Tech Stack
 
 ### Frontend
-
-* React.js
-* Tailwind CSS
-* HTML5 Canvas API
+- React.js
+- Tailwind CSS
+- HTML5 Canvas API
 
 ### Backend
-
-* Node.js
-* Express.js
-* Socket.IO (Realtime communication)
+- Node.js
+- Express.js
+- Socket.IO (Realtime Engine)
 
 ---
 
-## 📡 How It Works
+## 📡 Architecture
 
 ```text
-User Action → Socket Emit → Server Broadcast → Other Clients Update UI
-```
+User Action → Socket Emit → Server → Broadcast → Other Clients Update UI
+````
 
-* Drawing events are sent via sockets
-* Server broadcasts updates to all users in the room
-* Canvas re-renders based on shared state
+* All drawing events are emitted via sockets
+* Server synchronizes state across users
+* Clients re-render canvas dynamically
 
 ---
 
 ## 🚀 Getting Started
 
-### 1️⃣ Clone the Repository
+### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/realtime-canvas.git
+git clone https://github.com/gaurav-opensource/realtime-canvas-board
 cd realtime-canvas
 ```
 
@@ -90,7 +112,7 @@ npm install
 
 ---
 
-### 3️⃣ Run the App
+### 3️⃣ Run Application
 
 #### Start Backend
 
@@ -108,7 +130,7 @@ npm run dev
 
 ---
 
-### 4️⃣ Open in Browser
+### 4️⃣ Open App
 
 ```text
 http://localhost:5173
@@ -118,13 +140,14 @@ http://localhost:5173
 
 ## 🔗 Usage
 
-1. Click **Start Drawing**
-2. Share the generated URL with others
-3. Collaborate in realtime 🎉
+1. Open the app
+2. Click **Start Drawing**
+3. Share the room link
+4. Collaborate in realtime 🎉
 
 ---
 
-## 📌 Project Structure
+## 📁 Project Structure
 
 ```text
 frontend/
@@ -143,21 +166,21 @@ backend/
 
 ---
 
-## ⚡ Realtime Features Breakdown
+## ⚡ Realtime Feature Matrix
 
-| Feature              | Status  |
-| -------------------- | ------- |
-| Drawing Sync         | ✅       |
-| Shape Sync           | ✅       |
-| Move / Resize Sync   | ✅       |
-| Undo/Redo (Per User) | ✅       |
-| Cursor Tracking      | ⭐ Bonus |
+| Feature              | Status |
+| -------------------- | ------ |
+| Drawing Sync         | ✅      |
+| Shape Sync           | ✅      |
+| Move / Resize Sync   | ✅      |
+| Undo/Redo (Per User) | ✅      |
+| Cursor Tracking      | ⭐      |
 
 ---
 
 ## 🎯 Assignment Coverage
 
-This project fulfills all core requirements:
+This project fully satisfies the requirements described in the assignment :
 
 * Infinite canvas ✔
 * Drawing tools ✔
@@ -165,53 +188,58 @@ This project fulfills all core requirements:
 * Shareable rooms ✔
 * Per-user undo/redo ✔
 
-Bonus features implemented:
-
-* Selection & resizing
-* Cursor tracking
-* UI enhancements
-
 ---
 
 ## 🧠 Challenges Solved
 
-* Handling **realtime synchronization** across multiple users
-* Implementing **per-user undo/redo logic**
-* Managing **canvas transformations (zoom + pan)**
-* Designing **smooth drawing experience**
+* 🔄 Realtime synchronization across multiple users
+* 🧩 Per-user undo/redo logic (non-trivial)
+* 🎯 Smooth drawing without lag
+* 🔍 Canvas transformations (zoom + pan math)
+* ⚡ Efficient rendering with dynamic state
 
 ---
 
-## 🔮 Future Improvements
+## 🔮 Future Enhancements
 
 * 🖼 Image upload support
 * 📝 Text tool
-* 🎨 Stroke width & color picker
-* 👥 User presence (names + colors)
-* 💾 Save/load canvas
+* 🎨 Color picker & stroke width
+* 👥 User names + colored cursors
+* 💾 Save / load canvas
 
 ---
 
 ## 📄 AI Usage Disclosure
 
-This project was built with the assistance of AI tools (ChatGPT).
-All prompts and usage are documented in `PROMPTS.md`.
+This project was developed with the assistance of AI tools, including:
+
+- ChatGPT (for concept clarification, debugging, and implementation guidance)
+- GitHub Copilot (for code suggestions and productivity)
+
+All AI-assisted interactions and prompts are documented in **PROMPTS.md** for transparency.
 
 ---
 
 ## 🙌 Author
 
-**Your Name**
+**Gaurav Yadav**
 
-* GitHub: https://github.com/your-username
-* LinkedIn: https://linkedin.com/in/your-profile
-
----
-
-## ⭐ Final Note
-
-This project demonstrates **realtime systems, frontend engineering, and collaborative UX design**, making it suitable for internships and full-stack roles.
+* GitHub: [https://github.com/gaurav-opensource](https://github.com/gaurav-opensource)
+* LinkedIn: [https://linkedin.com/in/your-profile](https://www.linkedin.com/in/gauravyadav95/)
 
 ---
 
-✨ *If you like this project, consider giving it a star!*
+## ⭐ Final Thoughts
+
+This project demonstrates:
+
+* Realtime system design
+* Advanced frontend engineering
+* Collaborative UX thinking
+
+
+
+
+
+
