@@ -212,12 +212,11 @@ This project fully satisfies the requirements described in the assignment :
 
 ## 📄 AI Usage Disclosure
 
-This project was developed with the assistance of AI tools, including:
+This project was developed with limited assistance from GitHub Copilot for minor code suggestions and improving development speed.
 
-- ChatGPT (for concept clarification, debugging, and implementation guidance)
-- GitHub Copilot (for code suggestions and productivity)
+The overall architecture, core logic, and implementation were designed and written independently. Copilot was used only as a productivity aid (e.g., boilerplate or syntax suggestions), not for generating complete solutions.
 
-All AI-assisted interactions and prompts are documented in **PROMPTS.md** for transparency.
+All major features, including realtime synchronization and per-user undo/redo logic, were implemented through independent problem-solving and understanding.
 
 ---
 
