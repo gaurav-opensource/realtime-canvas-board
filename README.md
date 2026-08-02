@@ -88,7 +88,7 @@ User Action → Socket Emit → Server → Broadcast → Other Clients Update UI
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/gaurav-opensource/realtime-canvas-board
+git clone https://github.com/gauravdev95/realtime-canvas-board
 cd realtime-canvas
 ```
 
@@ -224,7 +224,7 @@ All major features, including realtime synchronization and per-user undo/redo lo
 
 **Gaurav Yadav**
 
-* GitHub: [https://github.com/gaurav-opensource](https://github.com/gaurav-opensource)
+* GitHub: [https://github.com/gauravdev95](https://github.com/gauravdev95)
 * LinkedIn: [https://linkedin.com/in/your-profile](https://www.linkedin.com/in/gauravyadav95/)
 
 ---

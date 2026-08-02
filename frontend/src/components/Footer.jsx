@@ -30,7 +30,7 @@ const Footer = () => {
         <div>
           <h3 className="text-white font-semibold mb-2">Connect</h3>
           <a
-            href="https://github.com/gaurav-opensource/realtime-canvas-board"
+            href="https://github.com/gauravdev95/realtime-canvas-board"
             target="_blank"
             rel="noreferrer"
             className="hover:text-white transition"
